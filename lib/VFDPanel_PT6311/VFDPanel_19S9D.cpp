@@ -160,7 +160,7 @@ uint8_t VFD_19S9D::write_f(uint8_t* buffer, uint8_t dstIndex, uint8_t len)
 /*
   Reads an ASCII string from PGM memory and writes it to intermediate frame buffer
 */
-void VFD_19S9D::print_f_p(const prog_char str[])
+void VFD_19S9D::print_f_p(const char str[])
 {
     char c;
     uint8_t idx = 0;

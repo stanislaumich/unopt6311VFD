@@ -164,7 +164,7 @@ class VFD_19S9D : public Print
         //Transfer array to intermediate buffer
         uint8_t write_f(uint8_t* buffer, uint8_t dstIndex, uint8_t len);
         //Transfer string from program memory to intermediate buffer
-        void print_f_p(const prog_char str[]);
+        void print_f_p(const char str[]);
         //Transfer string from memory to intermediate buffer
         void print_f(char str[]);
         //Transfer whole intermediate buffer to display
