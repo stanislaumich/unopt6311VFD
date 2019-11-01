@@ -22,7 +22,7 @@
 #define VFD_DISP_MODE_13D15S 0xC //13 digits, 15 segments
 #define VFD_DISP_MODE_14D14S 0xD //14 digits, 14 segments
 #define VFD_DISP_MODE_15D13S 0xE //15 digits, 13 segments
-#define VFD_DISP_MODE_12D16S 0xF //16 digits, 12 segments
+#define VFD_DISP_MODE_16D12S 0xF //16 digits, 12 segments
 
 #define PT6311_MEM_WR_CMD   0x40
 #define PT6311_LED_WR_CMD   0x41
