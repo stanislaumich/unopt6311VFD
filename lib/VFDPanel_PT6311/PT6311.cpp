@@ -82,6 +82,31 @@ void PT6311::command(uint8_t value, uint8_t nodata)
     if (nodata > 0) digitalWrite(_cs, HIGH);
 }
 
+uint8_t PT6311::commands(uint8_t nodata) 
+{
+    digitalWrite(_sclk, HIGH);
+    digitalWrite(_cs, LOW);
+    uint8_t t;
+    uint8_t i;
+    for (i = 0; i < PT6311_DATALEN; i++)
+    {
+        t=digitalRead(_data);
+        /*
+        if (( value >> i ) & 0x1)
+            digitalWrite(_data, HIGH);
+        else 
+            digitalWrite(_data, LOW);
+        */
+
+
+        digitalWrite(_sclk, LOW);
+        digitalWrite(_sclk, HIGH);
+    }
+    if (nodata > 0) digitalWrite(_cs, HIGH);
+    return t;
+}
+
+
 void PT6311::data(uint8_t value, uint8_t init_cs, uint8_t finalise_cs) 
 {
     digitalWrite(_sclk, HIGH);

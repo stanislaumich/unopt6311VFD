@@ -48,6 +48,7 @@ class PT6311
         void addrSetCmd(uint8_t addr);
         //Low level function for sending commands
         void command(uint8_t value, uint8_t nodata);
+        uint8_t commands(uint8_t nodata);
         //Low level function for sending data
         void data(uint8_t value, uint8_t init_cs, uint8_t finalise_cs);
 

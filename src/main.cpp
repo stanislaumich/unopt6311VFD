@@ -134,6 +134,10 @@ void setup()
  //pt6311_driver.data(0, false, true);
 }
 
+int th=0;
+int tm=0;
+int ts=0;
+bool e;
 void loop()
 {  
     //Don't do any work here - just a stub
@@ -154,7 +158,23 @@ void loop()
         i/=2;
         delay(200);
       }
-      showtime(21,29,36);
+      //uint8_t w=pt6311_driver.commands(1);
+      ts+=1;
+      if (ts==60){
+        ts=0;
+        tm+=1;
+      }
+      if (tm==60){
+       tm=0;
+       th+=1; 
+      }
+      if (th==24){th=0;}
+      showtime(th,tm,ts);
+      delay(390);
+
+      pt6311_driver.displayLEDWriteCmd(true, false);
+      e?pt6311_driver.data(0, false, true):pt6311_driver.data(255, false, true);
+      e=!e;
       /*
       pt6311_driver.displayLEDWriteCmd(true, false);
       pt6311_driver.data(0, false, true);
