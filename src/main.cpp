@@ -13,9 +13,9 @@
 #include <util/delay.h>
 #include <PT6311.h>
 
-#define VFD_CS_PIN 1   //Just an example, specify your own correct pin number! This is STB in PT6311 datasheet notation.
-#define VFD_CLK_PIN 2  //Just an example, specify your own correct pin number! This is CLK in PT6311 datasheet notation.
-#define VFD_DATA_PIN 3 //Just an example, specify your own correct pin number! This is DIN in PT6311 datasheet notation.
+#define VFD_CS_PIN 2   //Just an example, specify your own correct pin number! This is STB in PT6311 datasheet notation.
+#define VFD_CLK_PIN 3  //Just an example, specify your own correct pin number! This is CLK in PT6311 datasheet notation.
+#define VFD_DATA_PIN 4 //Just an example, specify your own correct pin number! This is DIN in PT6311 datasheet notation.
 
 #define VFD_BYTES_PER_DIGIT 3      //3
 PT6311 pt6311_driver;
